@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calculadora</title>
+<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+<script type="text/javascript">
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+
+
+function calcular(){
+var pes = document.calculadora.peso.value;
+var alt = document.calculadora.altura.value;
+
+if(pes == "" || alt == ""){
+alert("Falta Ingresar una Cantidad");
+
+}else{
+ var total= (pes /(alt * alt) );
+
+ 
+ document.calculadora.imct.value = total;
+}
+
+}
+
+
+function convertir(tipo){
+var can=parseFloat(document.calculadora.cantidad.value);
+
+
+
+
+if(document.calculadora.cantidad.value == "" || document.calculadora.cantidad.value==""  ){
+alert("Falta Ingresar una Cantidad");
+
+}else{if(tipo =="dolar"){
+
+	var totalp = can * 18.70; 	
+	document.calculadora.tipoc.value = "18.70 pesos por dolar";
+	document.calculadora.total.value = totalp;
+}
+
+if(tipo =="canad"){
+   
+	var totalp = can * 16.60; 	
+	document.calculadora.tipoc.value = "16.60 pesos por dolar canadiense";
+	document.calculadora.total.value = totalp;
+}
+if(tipo =="eur"){
+ 
+	var totalp = can * 21; 	
+	document.calculadora.tipoc.value = "21.00 pesos por euro";
+	document.calculadora.total.value = totalp;
+}
+ }
+}
+
+
+
+
+
+
+
+  </script>
+</head>
+<body >
+<form id="calculadora" name="calculadora" method="post" action ="">
+<center>
+ <h1>Pre-Examen</h1>
+
+<div id="tabs" style="width:50%;height:400px;">
+  <ul>
+    <li><a href="#tab1"><b>IMC</b></a></li>
+    <li><a href="#tab2"><b>Cambio de Moneda</b></a></li>
+	
+  </ul>
+  <div id="tab1">
+    <h2><center><b>Calcula tu Indice de Masa Corporal</b></Center></h2> 
+   
+	<p style="text-align:justify"><br>
+	<label align=left><b>Peso: </b></label>
+	<input style="width:100px;"type="text" id="peso" name="peso" value="" onKeypress="if(event.keyCode <48 || event.keyCode >57) event.returnValue=false;"/><br>
+	<br>
+	<label align=left><b>Altura: </b></label>
+	<input style="width:100px;"type="text" id="altura" name="altura" value="" /><br>
+	<br>
+	<label align=left><b>IMC: </b></label>
+	<input style="width:100px;"type="text" id="imct" name="imct" value="" /><br>
+	
+	
+	</p>
+	<input type="button" name="calcula" id="calcula" value="Calcula" onclick="calcular()"/>
+	<input type="reset" name="btnLimpiar" id="Limpiar" value="Limpiar"/>
+	
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div id="tab2"> 
+    <h2><center><b>Cambio de Moneda</b></Center></h2>  
+    
+	<select id="tipo" name="tipo"  >
+<option value="other">Seleccione Moneda</option>
+<option value="dolar">D&oacute;lares</option>
+<option value="canad">D&oacute;lares Canadienses</option>
+<option value="eur">Euro</option></select>
+<br><br><br>
+
+<label align=left><b>Cantidad: </b></label>
+	<input style="width:100px;"type="text" id="cantidad" name="cantidad" value="" /><br>	
+	<br>
+	<label align=left><b>Tipo de Cambio: </b></label>
+	<input style="width:300px;"type="text" id="tipoc" name="tipoc" value="" /><br>
+	<br>
+	<label align=left><b>Total a Pagar: </b></label>
+	<input style="width:100px;"type="text" id="total" name="total" value="" /><br>
+	<br>
+	<input type="button" name="convierte" id="convierte" value="convierte" onclick="convertir(document.calculadora.tipo.value)"/>
+	<input type="reset" name="btnLimpiar" id="Limpiar" value="Limpiar"/>
+	
+  </div>
+ 
+  </form>
+</div>
+</center>
+</body>
+</html>

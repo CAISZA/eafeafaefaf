@@ -1,0 +1,636 @@
+﻿<Html>
+<head>
+ <meta charset="utf-8">
+ <meta name="keywords" content="pagina,html5, css3,maquetacion">
+ <meta name="description" content="es una pagina con estilos de css3">
+ <script type="text/javascript"src="js/jquery.min.js"></script>
+	<script  type="text/javascript"src="js/main.js"></script>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="jquery/jquery-ui.js"></script>
+	 
+	
+ <Title>Interpolitecnicas</title>
+ <link rel="stylesheet" href="estilos/estilos.css" >
+ 
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+<script>
+$(document).ready(function() {
+		$('#menui').menui();
+    });
+	
+	$(function(){
+		$('#slider a:gt(0)').hide();
+			var interval = setInterval(changeDiv, 6000);	
+			function changeDiv(){
+				$('#slider a:first-child').fadeOut(1000).next('a').fadeIn(1000).end().appendTo('#slider');
+				};
+				$('.mas').click(function(){
+					changeDiv();
+					clearInterval(interval);
+					interval = setInterval(changeDiv, 6000);
+				});
+				$('.menos').click(function(){
+					$('#slider a:first-child').fadeOut(1000);
+						$('#slider a:last-child').fadeIn(1000).prependTo('#slider');
+							clearInterval(interval);
+							interval = setInterval(changeDiv, 6000);
+				});
+	});
+
+	
+	  $(document).ready(function() {
+$("#historia").on( "click", function() {
+						$('#cuadro1').show(1000);
+						$('#cuadro2').hide(1000);
+						$('#cuadro3').hide(1000);
+						$('#cuadro4').hide(1000);
+						$('#cuadro5').show(1000);
+						$('#cuadro6').hide(1000);
+
+					});
+
+					$("#gastronomia").on( "click", function() {
+						$('#cuadro1').hide(1000);
+						$('#cuadro2').show(1000);
+						$('#cuadro3').hide(1000);
+						$('#cuadro4').hide(1000);
+						$('#cuadro5').hide(1000);
+						$('#cuadro6').show(1000);
+					});
+
+					$("#sedes").on( "click", function() {
+						$('#cuadro1').hide(1000);
+						$('#cuadro2').hide(1000);
+						$('#cuadro3').show(1000);
+						$('#cuadro4').show(1000);
+						$('#cuadro5').hide(1000);
+						$('#cuadro6').hide(1000);
+					});
+
+					$("#mas").on( "click", function() {
+						$('#cuadro1').show(1000);
+						$('#cuadro2').show(1000);
+						$('#cuadro3').show(1000);
+						$('#cuadro4').show(1000);
+						$('#cuadro5').show(1000);
+						$('#cuadro6').show(1000);
+					});
+					});
+					$(function(){
+		$('#slider a:gt(0)').hide();
+			var interval = setInterval(changeDiv, 6000);	
+			function changeDiv(){
+				$('#slider a:first-child').fadeOut(1000).next('a').fadeIn(1000).end().appendTo('#slider');
+				};
+				$('.mas').click(function(){
+					changeDiv();
+					clearInterval(interval);
+					interval = setInterval(changeDiv, 6000);
+				});
+				$('.menos').click(function(){
+					$('#slider a:first-child').fadeOut(1000);
+						$('#slider a:last-child').fadeIn(1000).prependTo('#slider');
+							clearInterval(interval);
+							interval = setInterval(changeDiv, 6000);
+				});
+	});
+	
+	function logins(){
+			var ema = document.getElementById("email").value;
+			var con = document.getElementById("contra").value;
+					
+			if(ema == '' || con == '') {
+				alert('Faltan campos por llenar');
+			}if (email.value.search(/^[a-zA-Z]+([_\.-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9]+([\.-]?[a-zA-Z0-9]+)*(\.[a-zA-Z]{2,4})+$/) == -1){
+					alert('Ingresa un correo valido')
+				}else{
+				alert('Registrado correctamente');
+			}
+		}
+		
+	function logins1(){
+			var ema1 = document.getElementById("email1").value;
+			var con1 = document.getElementById("nombre").value;
+			var comen = document.getElementById("comentario").value;
+					
+			if(ema1 == '' || con1 == '' || comen == '') {
+				alert('Faltan campos por llenar');
+			}else{if (email1.value.search(/^[a-zA-Z]+([_\.-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9]+([\.-]?[a-zA-Z0-9]+)*(\.[a-zA-Z]{2,4})+$/) == -1){
+					alert('Ingresa un correo valido')
+				}else{
+				alert('Enviado correctamente');
+			}}
+		}	
+</script>
+<style>
+.ui-menui { width: 350px; }
+	
+	
+
+.tb2 {
+	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 230px;
+}
+
+.tb2 {
+	background-color : #99FFCC;
+	border: 1px solid #008000;
+	width: 230px;
+}
+
+.tb2 {
+	border:2px solid #456879;
+	border-radius:10px;
+	height: 22px;
+	width: 230px;
+}
+h1#line{
+text-decoration: underline;
+margin-left:80px;
+font-size:45;
+}
+
+.myButton {
+
+	background-color:transparent;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:.px solid #000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:inherit;
+	font-size:11px;
+	padding:6px 5px;
+	text-decoration:none;
+	text-shadow:0px 0px 2px #473e47;
+}
+.myButton:hover {
+	background-color:transparent;
+	-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.5) ;
+box-shadow: 0 0 0 1px rgba(0,0,0,0.5) ;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+	
+}
+
+/* Contenedor general */
+#slider-wrapper {
+
+position: absolute;
+width: 850px;
+margin: 0 auto;
+padding: 0 0px;
+font-family: arial, sans-serif;
+font-size: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+
+}
+#abajo{
+	width: 200px;
+	height: 850px;
+	
+}
+/* Contenedor slider */
+#slider { 
+
+position: relative;
+width: 850px;
+padding-top: 50%; /* Aspect ratio */
+overflow: hidden;
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+
+}
+#slider > a {
+position:absolute;
+top:0;
+left:0;
+width: 100%;
+min-height: 100%;
+padding-top:125;
+}
+/* Ajuste de las imágenes */
+#slider img {
+width: 100%;
+height: 300px;
+position: absolute;
+margin:0;
+padding:; 
+border:0;
+}
+/* Flechas de navegación */
+a.mas, a.menos {
+position: absolute;
+top: 60%;
+left: 10px;
+z-index: 10;
+width: 0px;
+height: 0px;
+text-align: center;
+line-height: 15px;
+font-size: 75px;
+color: white;
+background: #333;
+ opacity: 0.5;
+text-decoration: none;
+}
+a.mas {
+left: 93%;
+margin-left: px;
+}
+
+#cul1 {
+
+position: absolute;
+width: 850px;
+margin: 0 auto;
+padding: 0 0px;
+font-family: arial, sans-serif;
+font-size: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+
+}
+#abajo{
+	width: 200px;
+	height: 850px;
+	
+}
+/* Contenedor slider */
+#cul { 
+
+position: relative;
+width: 850px;
+padding-top: 50%; /* Aspect ratio */
+overflow: hidden;
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+
+}
+#cul > a {
+position:absolute;
+top:0;
+left:0;
+width: 100%;
+min-height: 100%;
+padding-top:125;
+}
+/* Ajuste de las imágenes */
+#cul img {
+width: 100%;
+height: 300px;
+position: absolute;
+margin:0;
+padding:; 
+border:0;
+}
+.busca{
+display: inline-block;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+float: none;
+z-index: auto;
+width: 150px;
+height: 42px;
+position: static;
+cursor: pointer;
+opacity: 1;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: 0;
+padding: 0 20px;
+overflow: hidden;
+border: none;
+-webkit-border-radius: 21px;
+border-radius: 21px;
+font: normal 20px/normal "Antic", Helvetica, sans-serif;
+color: rgba(140,140,140,1);
+text-decoration: normal;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+background: rgba(40,40,40,0.4);
+-webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
+box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
+text-shadow: none;
+-webkit-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+-moz-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+-o-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+-webkit-transform: none;
+transform: none;
+-webkit-transform-origin: 50% 50% 0;
+transform-origin: 50% 50% 0;
+}
+
+.log{
+	display: inline-block;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+float: none;
+z-index: auto;
+width: auto;
+height: auto;
+position: relative;
+cursor: pointer;
+opacity: 1;
+margin: 0;
+padding: 0 10px 0 20px;
+overflow: visible;
+border: none;
+-webkit-border-radius: 0;
+border-radius: 0;
+font: normal 20px/2.4 "Open Sans", Helvetica, sans-serif;
+color: rgba(255,255,255,0.9);
+text-transform: capitalize;
+-o-text-overflow: clip;
+text-overflow: clip;
+background: #000;
+text-shadow: 0 1px 1px rgba(87,151,180,0.36) ;
+-webkit-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+-moz-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+-o-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+-webkit-transform: none;
+transform: none;
+-webkit-transform-origin: 50% 50% 0;
+transform-origin: 50% 50% 0;
+}
+
+
+#pcontacto{
+	padding-top:10px;
+	font-family:arial, "courier new", impact;
+	color:#808080;
+	font-size:.6em;
+	margin-left:80px;
+}
+
+.nn{
+	margin-left:80px;
+	background-color:transparent;
+	font-family:arial, "courier new", impact;
+	border: 1px solid #696969;
+	width:230px;
+	padding: 1px 15px;
+}
+
+::-webkit-input-placeholder { color: gray; } /* WebKit */
+:-moz-placeholder { color: gray; } /* Firefox 18- */
+::-moz-placeholder { color: gray; } /* Firefox 19+ */
+:-ms-input-placeholder { color: gray; } /* IE 10+ */
+
+.nn2{
+	margin-left:20px;
+	background-color:transparent;
+	font-family:arial, "courier new", impact;
+	border: 1px solid #696969;
+	width:230px;
+	padding: 1px 15px;
+	background-image: url("img/icono2.png");
+	background-repeat: no-repeat;
+	background-size: 15px;
+}
+
+input.nn{
+	background-image: url("img/icono1.png");
+	background-repeat: no-repeat;
+	background-size: 15px;
+}
+textarea.nn{
+	width:485px;
+	height:50px;
+	background-image: url("img/icono3.png");
+	background-repeat: no-repeat;
+	background-size: 15px;
+}
+
+#bo{
+	float: right;
+	margin-left:50px;
+	margin-right:50px;
+	margin-top:-45px;
+}
+
+.botoon{
+	padding:10px 65px;
+	font-size: 1em;
+	background-image: url(imagenes/bEnviar.jpg);
+	background-position:center;
+	-webkit-transition: background-image;
+	border: 0px;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0px 4px 0px #555;
+}
+
+.botoon:hover{
+	background-image: url(imagenes/bEnviar2.jpg);
+}
+
+</style>
+<body>
+
+		<section id="contenedor">
+	<header style="background: url(imagenes/pat.jpg)" >
+	<table >
+	<tr>
+	<td ><img  align=center  width=70px height=70px src="imagenes/logo.png"></img> 
+	<img align=Absbottom width=16px height=16px src="imagenes/face.png"></img>
+	<img align=Absbottom width=16px height=16px src="imagenes/twi.png">         </img>
+	</td>
+	
+	<td><a href="indxdxdex.html"><input class="myButton" type="button"  name="inicio1" id="inicio1" value="INICIO"/> </a> </td>
+	<td><a href="indxdxdex.html#noticias"><input class="myButton" type="button"  name="noticia1" id="noticia1" value="NOTICIAS"/> </a> </td>
+	<td><a href="indxdxdex.html#cuadricula"><input class="myButton" type="button"  name="conociendo" id="conociendo" value="CONOCIENDO MAZATL&Aacute;N"/> </a> </td>
+    <td><a href="indxdxdex.html#registro"><input class="myButton" type="button"  name="registro1" id="registro1" value="REGISTRO"/> </a> </td>
+	<td><a href="indxdxdex.html#deportes"><input class="myButton" type="button"  name="deportes1" id="deportes1" value="DEPORTES"/> </a> </td>
+	<td><a href="indxdxdex.html#cultura"><input class="myButton" type="button"  name="cultura1" id="cultura1" value="CULTURA"/> </a> </td>
+	<td><a href="indxdxdex.html#contacto"><input class="myButton" type="button"  name="contacto1" id="contacto1" value="CONTACTO"/> </a> </td>
+	<td><input class="busca" type="text" id="buscar" name="buscar" placeholder="Search" /> </a></td>
+	</tr>
+	</table>
+	</header>
+	
+	
+	<section style="background: url(imagenes/portada.png)"id="portada">
+	<center><img align="center" width=200px height=326px src="imagenes/logo.png"></center>
+	
+	</section>
+	
+	
+	
+	
+	
+	
+	<section id="noticias" >
+	<div id="der">
+					<h1>NOTICIAS.</h1>
+						<br><br>
+					<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						
+					</p>
+				</div>
+				<div id="izq">
+					<img src="imagenes/noti.jpg" alt"noti.jpg"> 
+				</div>
+
+		
+	</section>
+	
+	<section id="cuadricula">
+			<h1>CONOCIENDO<br>
+MAZATLAN.</h1> <br><br><br><br><br><br><br><br><br><br><br>
+                <input class="boton2" type="button" id="historia" name="historia" value="HISTORIA" />
+				<input class="boton21" type="button" id="gastronomia" name="gastronomia" value="GASTRONOMIA" />
+				<input class="boton22" type="button" id="sedes" name="sedes" value="SEDES" />
+				<br><br>
+				<div id="secciones_cuadros">
+				<section id="cuadro1">
+						<img src="imagenes/escudo.jpg" scr="escudo.jpg">
+						<b> 
+							Historia 
+						</b>
+						<p> Mazatlan | November 25, 2005 </p>
+				</section>
+				<section id="cuadro2">
+					<img src="imagenes/comi1.jpg" scr="comida1.jpg">
+					<b> 
+						Gastronomia 
+					</b>
+					<p> Mazatlan | Agosto 01, 2009 </p>
+				</section>
+				<section id="cuadro3">
+						<img src="imagenes/sede1.jpg" scr="sede1.jpg">
+						<b> 
+							Sede 
+						</b>
+						<p> Mazatlan | Enero 07, 2012 </p>
+				</section> <br><br>
+				<section id="cuadro4">
+					<img src="imagenes/sede2.jpg" scr="sede2.jpg">
+					<b> 
+						Sede 
+					</b>
+					<p> Mazatlan | Marzo 02, 2007 </p>
+				</section>
+				<section id="cuadro5">
+					<img src="imagenes/clav.jpg" scr="historia2.jpg">
+					<b> 
+						Historia 
+					</b>
+					<p> Mazatlan | Diciembre 24, 1870 </p>
+				</section>
+				<section id="cuadro6">
+					<img src="imagenes/comi2.jpg" scr="comi2.jpg">
+					<b> 
+						Gastronomia 
+					</b>
+					<p> Mazatlan | Abril 15, 2011 </p>
+				</section> <br><br>
+					<input class="boton2" type="button" id="mas" name="mas" value="+"  />
+				</div>
+	
+	</section>
+	
+	<section id="registro">
+	<div class="registroo">
+	<h1>REGISTRO.</h1>
+	</div>
+		<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Bienvenido</h1>
+			</div>
+
+			<div class="login-form">
+				<div class="control-group">
+				<input class="login-field-icon fui-user" type="email" id="email" name="email" placeholder="EMAIL" value="" required />
+			
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field-icon fui-lock" type="text" id="contra" name="contra" placeholder="Contraseña" value="" required/> 
+				
+				</div>
+					
+				<input  class="btn btn-primary btn-large btn-block" type="button" id="login" name="login" value="Login" onclick="logins()" />
+				
+			</div>
+		</div>
+	</div>
+	</section>
+	
+	<section id="deportes" >
+<div class="titdep">
+<H1>DEPORTES.</h1>
+</div>
+<div id="slider-wrapper">
+						<div id="slider">
+							<a ><img src="imagenes/1.jpg" /></a>
+							<a ><img src="imagenes/2.jpg" /></a>
+							<a ><img src="imagenes/3.jpg" /></a>
+						</div>
+						<a href="javascript:void();" class="mas">&rsaquo;</a>
+						<a href="javascript:void();" class="menos">&lsaquo;</a></div>
+	</section>
+	
+	<section id="cultura">
+	<div class="titecul">
+<H1>CULTURA.</h1>
+</div>
+<div id="cul1">
+<div id="cul">
+						
+							<a ><img src="imagenes/baile.jpg" /></a>
+							
+						</div>
+				</div>		
+	</section>
+	
+	<section id="contacto">
+	<a name="topeConta"></a>
+		     <h1 id="line"><br>CONTACTO.</h1>
+		     <p id="pcontacto">
+		     123A Building, Road Street Orlando District, US <br>
+		     +01 234 567 89 - +0123456789 | contactobook.com <br></p>
+		     <a href="https://twitter.com/upsinmazatlan?lang=es" target="_self"> <input type="image" src="imagenes/twiter.jpg" id="pcontacto"></a>
+		     <a href="https://www.facebook.com/UPSIN-Universidad-Polit%C3%A9cnica-de-Sinaloa-1637731703178730/?fref=ts" target="_self"> <input type="image" src="imagenes/face.jpg"></a>
+		     <a href="http://upsin.edu.mx/" target="_self"> <input type="image" src="imagenes/gogle.jpg"></a><br>
+		     <input type="text" class="nn" placeholder="E-MAIL" id="email1">
+             <input type="text" class="nn2" placeholder="Nombre" id="nombre"><br><br>
+             <textarea placeholder="Mensaje" class="nn" id="comentario"></textarea>
+			 <div id="bo">
+                 <input type="button" onclick="logins1()" class="botoon">
+             </div>
+	</section>
+	
+	<section id="pie">
+	<p>
+					UPSIN<br>
+                    2014 UPSIN. All rights reserved.<br>
+                    Desinged by ZAMORA DEL RIO<br><br>
+					 <center>
+		 <a href="indxdxdex.html"><img src="imagenes/key.png"></center></a>
+	</section>
+</section>
+
+</body>
+</html>
